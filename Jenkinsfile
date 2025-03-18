@@ -17,6 +17,12 @@ pipeline {
                 echo 'Deploying Application...'
             }
         }
+        stage('Test') {
+            steps {
+                sh './main/nonexistentfile' // Invalid file to trigger failure
+            }
+}
+
     }
 
     post {
