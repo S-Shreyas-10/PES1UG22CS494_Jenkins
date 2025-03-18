@@ -9,8 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './main/nonexistentfile' // Invalid file to trigger failure
-            }
+                sh './main/PES1UG22CS494'
         }
         stage('Deploy') {
             steps {
