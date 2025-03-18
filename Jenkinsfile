@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh './main/nonexistentfile' // Invalid file to trigger failure
             }
-}
+        }
 
     }
 
