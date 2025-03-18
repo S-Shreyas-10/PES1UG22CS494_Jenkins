@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './main/PES1UG22CS494'
+                sh './main/nonexistentfile' // Invalid file to trigger failure
             }
         }
         stage('Deploy') {
@@ -17,12 +17,6 @@ pipeline {
                 echo 'Deploying Application...'
             }
         }
-        stage('Test') {
-            steps {
-                sh './main/nonexistentfile' // Invalid file to trigger failure
-            }
-        }
-
     }
 
     post {
